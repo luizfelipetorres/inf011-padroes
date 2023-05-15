@@ -1,12 +1,11 @@
 package factory;
 
-import model.Equipamento;
 import model.Maquina;
 
-public class MaquinaFactory implements EquipamentoFactory{
+public class MaquinaFactory implements EquipamentoFactory<Maquina> {
 
   @Override
-  public Equipamento criarEquipamento(String identificador, int quantidade) {
+  public Maquina criarEquipamento(String identificador, int quantidade) {
     return new Maquina(identificador, quantidade);
   }
 }

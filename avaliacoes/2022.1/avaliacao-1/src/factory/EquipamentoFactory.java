@@ -2,7 +2,8 @@ package factory;
 
 import model.Equipamento;
 
-interface EquipamentoFactory {
-  Equipamento criarEquipamento(String identificador, int quantidade);
+public interface EquipamentoFactory<T extends Equipamento> {
+
+  T criarEquipamento(String identificador, int quantidade);
 
 }

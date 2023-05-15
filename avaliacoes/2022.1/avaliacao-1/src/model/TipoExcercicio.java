@@ -1,5 +1,5 @@
 package model;
 
 public enum TipoExcercicio {
-  CARDIO;
+  RESISTIDO, FUNCIONAL, CARDIOVASCULAR, MOBILIDADE
 }
