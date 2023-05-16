@@ -8,8 +8,8 @@ import prototype.Prototype;
 
 public class Curso extends Produto implements Prototype<Curso> {
 
-  private List<Disciplina> disciplinas;
-  private List<Livro> livros;
+  private final List<Disciplina> disciplinas;
+  private final List<Livro> livros;
 
   public Curso(Curso curso) {
     this(curso.codigo, curso.nome, curso.preco, curso.disciplinas

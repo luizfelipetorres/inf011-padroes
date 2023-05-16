@@ -10,8 +10,8 @@ import model.Livro;
 public class CursoBuilder implements Builder {
 
   private String nome;
-  private List<Livro> livros;
-  private List<Disciplina> disciplinas;
+  private final List<Livro> livros;
+  private final List<Disciplina> disciplinas;
   private String codigo;
 
   public CursoBuilder() {
@@ -45,7 +45,7 @@ public class CursoBuilder implements Builder {
   }
 
   public Curso criar() {
-    Double precoTotal= 0.0;
+    Double precoTotal = 0.0;
     for (Livro livro : livros) {
       precoTotal += livro.getPreco();
     }

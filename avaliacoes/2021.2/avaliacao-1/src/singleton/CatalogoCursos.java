@@ -8,7 +8,7 @@ import model.Curso;
 public class CatalogoCursos {
 
   private static CatalogoCursos instance = null;
-  private Map<String, Curso> registroCursos;
+  private final Map<String, Curso> registroCursos;
 
   private CatalogoCursos() {
     registroCursos = new HashMap<>();

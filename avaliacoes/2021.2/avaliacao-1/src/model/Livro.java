@@ -3,6 +3,7 @@ package model;
 import prototype.Prototype;
 
 public class Livro extends Produto implements Prototype<Livro> {
+
   private String isbn;
 
   public Livro(String codigo, String nome, Double preco) {

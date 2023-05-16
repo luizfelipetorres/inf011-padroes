@@ -10,8 +10,14 @@ public class EmentaBuilder implements Builder {
 
   private String nome;
   private String codigo;
-  private List<Livro> livros;
-  private List<Disciplina> disciplinas;
+  private final List<Livro> livros;
+  private final List<Disciplina> disciplinas;
+
+  public EmentaBuilder() {
+    this.nome = "Curso";
+    disciplinas = new ArrayList<>();
+    livros = new ArrayList<>();
+  }
 
   @Override
   public Builder comNome(String nome) {
@@ -23,12 +29,6 @@ public class EmentaBuilder implements Builder {
   public Builder comLivro(Livro livro) {
     livros.add(livro);
     return this;
-  }
-
-  public EmentaBuilder() {
-    this.nome = "Curso";
-    disciplinas = new ArrayList<>();
-    livros = new ArrayList<>();
   }
 
   @Override
@@ -44,12 +44,8 @@ public class EmentaBuilder implements Builder {
 
   public String criarEmenta() {
 
-
-
-    return new StringBuilder()
-        .append(String.format("Nome do curso: %s\n", nome))
-        .append(String.format("Livros: %s\n", livros))
-        .append(String.format("Disciplinas: %s\n", disciplinas))
-        .toString();
+    return String.format("Nome do curso: %s\n", nome)
+        + String.format("Livros: %s\n", livros)
+        + String.format("Disciplinas: %s\n", disciplinas);
   }
 }

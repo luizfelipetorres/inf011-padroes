@@ -1,8 +1,5 @@
 package factory;
 
-import model.Disciplina;
-import model.Produto;
-
 public enum TipoProduto {
 
   LIVRO {
@@ -12,7 +9,7 @@ public enum TipoProduto {
     }
   },
 
-  DISCIPLINA{
+  DISCIPLINA {
     @Override
     public DisciplinaFactory getFactory() {
       return new DisciplinaFactory();
