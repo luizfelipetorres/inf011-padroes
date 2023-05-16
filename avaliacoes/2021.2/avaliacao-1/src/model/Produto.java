@@ -5,6 +5,18 @@ public abstract class Produto {
   protected String nome;
   protected Double preco;
 
+  public void setCodigo(String codigo) {
+    this.codigo = codigo;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  public void setPreco(Double preco) {
+    this.preco = preco;
+  }
+
   public String getCodigo() {
     return codigo;
   }
