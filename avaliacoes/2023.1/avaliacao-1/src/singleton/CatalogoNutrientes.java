@@ -31,6 +31,7 @@ public class CatalogoNutrientes implements ArmazemNutrientes {
       n = catalogo.get(nome);
       n.setCaloriaPorUnidade(caloriaPorUnidade);
       n.setUnidade(unidade);
+      catalogo.put(nome, n);
       return n;
     }
     n = new Nutriente(nome, unidade, caloriaPorUnidade);
